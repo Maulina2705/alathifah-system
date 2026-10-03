@@ -25,10 +25,10 @@
         @endif
 
         <div>
-            <label for="login" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Email atau Username</label>
+            <label for="login" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Username / Email</label>
             <input type="text" name="login" id="login" value="{{ old('login') }}" required autofocus
                    class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white dark:focus:bg-slate-900 transition"
-                   placeholder="username atau nama@alathifah.sch.id">
+                   placeholder="username / email">
         </div>
 
         <div>
@@ -63,42 +63,11 @@
         </button>
     </form>
 
-    <!-- Quick Demo Accounts -->
-    <div class="mt-7 pt-5 border-t border-slate-100 dark:border-slate-800">
-        <p class="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider text-center mb-3">Pilihan Cepat Akun Login:</p>
-        <div class="grid grid-cols-2 gap-2 text-xs">
-            <button type="button" onclick="fillLogin('admin', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950/60 hover:text-blue-700 dark:hover:text-blue-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Super Admin</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-blue-600 dark:text-blue-400">admin</code></span>
-            </button>
-            <button type="button" onclick="fillLogin('it', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/60 hover:text-amber-700 dark:hover:text-amber-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Staff IT / Cetak</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-amber-600 dark:text-amber-400">it</code></span>
-            </button>
-            <button type="button" onclick="fillLogin('guru', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-pink-50 dark:hover:bg-pink-950/60 hover:text-pink-700 dark:hover:text-pink-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Guru Tahfizh</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-pink-600 dark:text-pink-400">guru</code></span>
-            </button>
-            <button type="button" onclick="fillLogin('walikelas', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-purple-50 dark:hover:bg-purple-950/60 hover:text-purple-700 dark:hover:text-purple-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Wali Kelas</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-purple-600 dark:text-purple-400">walikelas</code></span>
-            </button>
-            <button type="button" onclick="fillLogin('kepsek', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950/60 hover:text-blue-700 dark:hover:text-blue-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Kepsek SD</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-blue-600 dark:text-blue-400">kepsek</code></span>
-            </button>
-            <button type="button" onclick="fillLogin('kepsek.smp', 'password')"
-                    class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950/60 hover:text-blue-700 dark:hover:text-blue-300 border border-slate-200 dark:border-slate-700 text-left transition cursor-pointer">
-                <span class="font-bold block text-slate-800 dark:text-slate-200">Kepsek SMP</span>
-                <span class="text-[10px] text-slate-500">User: <code class="font-bold text-blue-600 dark:text-blue-400">kepsek.smp</code></span>
-            </button>
-        </div>
-        <p class="text-[11px] text-slate-400 text-center mt-2.5">Password default semua akun: <code class="font-bold text-slate-600 dark:text-slate-300">password</code></p>
+    <!-- Footer Copyright -->
+    <div class="mt-7 pt-5 border-t border-slate-100 dark:border-slate-800 text-center">
+        <p class="text-xs text-slate-400 dark:text-slate-500">
+            &copy; 2026 MHS-IT Team IRGT. All rights reserved.
+        </p>
     </div>
 </div>
 
@@ -117,11 +86,6 @@
             eyeIcon.classList.remove('hidden');
             eyeSlashIcon.classList.add('hidden');
         }
-    }
-
-    function fillLogin(login, password) {
-        document.getElementById('login').value = login;
-        document.getElementById('password').value = password;
     }
 </script>
 @endsection
