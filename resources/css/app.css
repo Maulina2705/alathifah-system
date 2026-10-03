@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+    --theme-primary: #2563eb;
+    --theme-primary-hover: #1d4ed8;
+    --theme-primary-light: #eff6ff;
+    --theme-primary-border: #bfdbfe;
+    --theme-primary-text: #1d4ed8;
+    
+    --theme-pink: #ec4899;
+    --theme-pink-hover: #db2777;
+    --theme-pink-light: #fdf2f8;
+    --theme-pink-border: #fbcfe8;
+    --theme-pink-text: #db2777;
+    
+    --theme-yellow: #f59e0b;
+    --theme-yellow-hover: #d97706;
+    --theme-yellow-light: #fffbeb;
+    --theme-yellow-border: #fde68a;
+    --theme-yellow-text: #b45309;
+
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #ffffff;
+    --border-subtle: #e2e8f0;
+    --border-muted: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+}
+
+.dark {
+    --theme-primary: #3b82f6;
+    --theme-primary-hover: #60a5fa;
+    --theme-primary-light: rgba(59, 130, 246, 0.15);
+    --theme-primary-border: rgba(59, 130, 246, 0.3);
+    --theme-primary-text: #93c5fd;
+    
+    --theme-pink: #f472b6;
+    --theme-pink-hover: #fb7185;
+    --theme-pink-light: rgba(244, 114, 182, 0.15);
+    --theme-pink-border: rgba(244, 114, 182, 0.3);
+    --theme-pink-text: #f9a8d4;
+    
+    --theme-yellow: #fbbf24;
+    --theme-yellow-hover: #f59e0b;
+    --theme-yellow-light: rgba(251, 191, 36, 0.15);
+    --theme-yellow-border: rgba(251, 191, 36, 0.3);
+    --theme-yellow-text: #fde68a;
+
+    --bg-page: #0b0f19;
+    --bg-surface: #111827;
+    --bg-surface-elevated: #1e293b;
+    --border-subtle: #1f2937;
+    --border-muted: #374151;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+}
+
+/* Custom theme helper classes */
+.bg-theme-primary { background-color: var(--theme-primary) !important; }
+.hover\:bg-theme-primary-hover:hover { background-color: var(--theme-primary-hover) !important; }
+.text-theme-primary { color: var(--theme-primary) !important; }
+.text-theme-primary-accent { color: var(--theme-primary-text) !important; }
+.border-theme-primary { border-color: var(--theme-primary) !important; }
+.bg-theme-primary-light { background-color: var(--theme-primary-light) !important; }
+
+.bg-theme-pink { background-color: var(--theme-pink) !important; }
+.hover\:bg-theme-pink-hover:hover { background-color: var(--theme-pink-hover) !important; }
+.text-theme-pink { color: var(--theme-pink) !important; }
+.text-theme-pink-accent { color: var(--theme-pink-text) !important; }
+.border-theme-pink { border-color: var(--theme-pink) !important; }
+.bg-theme-pink-light { background-color: var(--theme-pink-light) !important; }
+
+.bg-theme-yellow { background-color: var(--theme-yellow) !important; }
+.hover\:bg-theme-yellow-hover:hover { background-color: var(--theme-yellow-hover) !important; }
+.text-theme-yellow { color: var(--theme-yellow) !important; }
+.text-theme-yellow-accent { color: var(--theme-yellow-text) !important; }
+.border-theme-yellow { border-color: var(--theme-yellow) !important; }
+.bg-theme-yellow-light { background-color: var(--theme-yellow-light) !important; }
+
+.bg-surface-main { background-color: var(--bg-surface) !important; }
+.bg-surface-card { background-color: var(--bg-surface-elevated) !important; }
+.bg-surface-app { background-color: var(--bg-page) !important; }
+.border-surface-subtle { border-color: var(--border-subtle) !important; }
+.text-surface-primary { color: var(--text-primary) !important; }
+.text-surface-secondary { color: var(--text-secondary) !important; }
+.text-surface-muted { color: var(--text-muted) !important; }
+
+/* Custom smooth transitions for theme switching */
+html {
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
